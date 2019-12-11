@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+  - docker
+before_install:
+  - docker --version
+script:
+  - cd presto
+  - docker build -t presto-adls-wasb .
+  - cd ../hive
+  - docker build -t hive-adls-wasb .
+  - docker images
+  - exit 0
+
