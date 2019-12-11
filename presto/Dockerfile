@@ -8,6 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV PRESTO_VERSION 0.178
 ENV PRESTO_DIR /opt/presto
 ENV PRESTO_DATA_DIR /opt/presto/data
+ENV METASTORE_URI thrift://localhost:9083
 
 # Update
 RUN apt-get update && \ 
